@@ -89,8 +89,12 @@ WSGI_APPLICATION = 'or_agriculture.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'USER': 'alex',                      # Not used with sqlite3
+        'PASSWORD': 'mysecretpassword',                # Not used with sqlite3.
+        'HOST': '198.72.81.88',                     # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '55432',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
